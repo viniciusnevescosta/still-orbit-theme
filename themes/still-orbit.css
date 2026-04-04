@@ -1,0 +1,143 @@
+/*
+ * Still Orbit
+ * A quiet, surreal color theme with mineral blues, misty neutrals,
+ * and soft amber highlights.
+ *
+ * Variants:
+ * - Still Orbit Mist  (light)
+ * - Still Orbit Night (dark)
+ */
+
+:root,
+[data-theme="still-orbit-mist"] {
+  color-scheme: light;
+
+  /* Base anchors */
+  --so-black: #232a31;
+  --so-paper: #f2eee8;
+
+  /* Light / Mist scale */
+  --so-base-50: #f6f2ec;
+  --so-base-100: #eee7de;
+  --so-base-150: #e3d9cd;
+  --so-base-200: #d4c6b7;
+  --so-base-300: #b8aba0;
+  --so-base-400: #9d9893;
+  --so-base-500: #7f878f;
+  --so-base-600: #596068;
+  --so-base-700: #39444f;
+  --so-base-800: #2e3a45;
+  --so-base-850: #28323c;
+  --so-base-900: #232a31;
+  --so-base-950: #171c22;
+
+  /* Accent families */
+  --so-red-400: #aa6b58;
+  --so-red-600: #7d473d;
+  --so-orange-400: #c88d60;
+  --so-orange-600: #97603d;
+  --so-yellow-400: #beaa76;
+  --so-yellow-600: #89764f;
+  --so-green-400: #7c9187;
+  --so-green-600: #546660;
+  --so-cyan-400: #6f93a9;
+  --so-cyan-600: #4b6c80;
+  --so-blue-400: #6d93b3;
+  --so-blue-600: #496882;
+  --so-purple-400: #81758f;
+  --so-purple-600: #595162;
+  --so-magenta-400: #a36f7c;
+  --so-magenta-600: #774a55;
+
+  /* Semantic tokens */
+  --so-bg: var(--so-paper);
+  --so-bg-elevated: var(--so-base-50);
+  --so-bg-subtle: var(--so-base-100);
+  --so-ui: var(--so-base-150);
+  --so-ui-strong: var(--so-base-200);
+  --so-border: var(--so-base-200);
+  --so-border-muted: var(--so-base-150);
+
+  --so-text: var(--so-base-700);
+  --so-text-muted: var(--so-base-600);
+  --so-text-faint: var(--so-base-400);
+  --so-heading: var(--so-black);
+
+  --so-link: var(--so-cyan-600);
+  --so-link-hover: var(--so-blue-600);
+
+  --so-primary: var(--so-base-700);
+  --so-primary-contrast: var(--so-base-50);
+  --so-secondary: var(--so-cyan-600);
+  --so-accent: var(--so-orange-400);
+  --so-accent-soft: #e6c5a4;
+
+  --so-success: var(--so-green-600);
+  --so-warning: var(--so-yellow-600);
+  --so-danger: var(--so-red-600);
+  --so-info: var(--so-blue-600);
+
+  --so-selection-bg: rgba(75, 108, 128, 0.18);
+  --so-selection-text: var(--so-black);
+  --so-shadow-color: rgba(35, 42, 49, 0.14);
+}
+
+.dark,
+[data-theme="still-orbit-night"] {
+  color-scheme: dark;
+
+  --so-bg: var(--so-black);
+  --so-bg-elevated: var(--so-base-950);
+  --so-bg-subtle: var(--so-base-900);
+  --so-ui: var(--so-base-850);
+  --so-ui-strong: var(--so-base-800);
+  --so-border: var(--so-base-800);
+  --so-border-muted: var(--so-base-850);
+
+  --so-text: var(--so-base-200);
+  --so-text-muted: var(--so-base-500);
+  --so-text-faint: var(--so-base-600);
+  --so-heading: var(--so-base-50);
+
+  --so-link: var(--so-blue-400);
+  --so-link-hover: var(--so-cyan-400);
+
+  --so-primary: var(--so-base-200);
+  --so-primary-contrast: var(--so-base-950);
+  --so-secondary: var(--so-cyan-400);
+  --so-accent: var(--so-orange-400);
+  --so-accent-soft: #e6c5a4;
+
+  --so-success: var(--so-green-400);
+  --so-warning: var(--so-yellow-400);
+  --so-danger: var(--so-red-400);
+  --so-info: var(--so-blue-400);
+
+  --so-selection-bg: rgba(109, 147, 179, 0.2);
+  --so-selection-text: var(--so-base-50);
+  --so-shadow-color: rgba(0, 0, 0, 0.28);
+}
+
+/* Sensible defaults */
+html,
+body {
+  background: var(--so-bg);
+  color: var(--so-text);
+}
+
+::selection {
+  background: var(--so-selection-bg);
+  color: var(--so-selection-text);
+}
+
+hr {
+  border-color: var(--so-border);
+}
+
+a {
+  color: var(--so-link);
+}
+
+a:hover {
+  color: var(--so-link-hover);
+}

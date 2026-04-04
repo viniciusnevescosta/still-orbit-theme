@@ -1,0 +1,117 @@
+{
+  "name": "Still Orbit",
+  "slug": "still-orbit",
+  "description": "A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.",
+  "inspiration": "Surreal architectural landscapes, reflective water, misty horizons, and restrained cinematic contrast.",
+  "variants": {
+    "mist": {
+      "label": "Still Orbit Mist",
+      "mode": "light",
+      "anchors": {
+        "paper": "#f2eee8",
+        "black": "#232a31",
+        "accentSoft": "#e6c5a4"
+      },
+      "base": {
+        "50": "#f6f2ec",
+        "100": "#eee7de",
+        "150": "#e3d9cd",
+        "200": "#d4c6b7",
+        "300": "#b8aba0",
+        "400": "#9d9893",
+        "500": "#7f878f",
+        "600": "#596068",
+        "700": "#39444f",
+        "800": "#2e3a45",
+        "850": "#28323c",
+        "900": "#232a31",
+        "950": "#171c22"
+      },
+      "semantic": {
+        "bg": "#f2eee8",
+        "bgElevated": "#f6f2ec",
+        "bgSubtle": "#eee7de",
+        "ui": "#e3d9cd",
+        "uiStrong": "#d4c6b7",
+        "border": "#d4c6b7",
+        "text": "#39444f",
+        "textMuted": "#596068",
+        "textFaint": "#9d9893",
+        "heading": "#232a31",
+        "link": "#4b6c80",
+        "linkHover": "#496882",
+        "primary": "#39444f",
+        "secondary": "#4b6c80",
+        "accent": "#c88d60",
+        "success": "#546660",
+        "warning": "#89764f",
+        "danger": "#7d473d",
+        "info": "#496882"
+      }
+    },
+    "night": {
+      "label": "Still Orbit Night",
+      "mode": "dark",
+      "anchors": {
+        "paper": "#f2eee8",
+        "black": "#232a31",
+        "accentSoft": "#e6c5a4"
+      },
+      "base": {
+        "50": "#f6f2ec",
+        "100": "#eee7de",
+        "150": "#e3d9cd",
+        "200": "#d4c6b7",
+        "300": "#b8aba0",
+        "400": "#9d9893",
+        "500": "#7f878f",
+        "600": "#596068",
+        "700": "#39444f",
+        "800": "#2e3a45",
+        "850": "#28323c",
+        "900": "#232a31",
+        "950": "#171c22"
+      },
+      "semantic": {
+        "bg": "#232a31",
+        "bgElevated": "#171c22",
+        "bgSubtle": "#232a31",
+        "ui": "#28323c",
+        "uiStrong": "#2e3a45",
+        "border": "#2e3a45",
+        "text": "#d4c6b7",
+        "textMuted": "#7f878f",
+        "textFaint": "#596068",
+        "heading": "#f6f2ec",
+        "link": "#6d93b3",
+        "linkHover": "#6f93a9",
+        "primary": "#d4c6b7",
+        "secondary": "#6f93a9",
+        "accent": "#c88d60",
+        "success": "#7c9187",
+        "warning": "#beaa76",
+        "danger": "#aa6b58",
+        "info": "#6d93b3"
+      }
+    }
+  },
+  "families": {
+    "red": { "400": "#aa6b58", "600": "#7d473d" },
+    "orange": { "400": "#c88d60", "600": "#97603d" },
+    "yellow": { "400": "#beaa76", "600": "#89764f" },
+    "green": { "400": "#7c9187", "600": "#546660" },
+    "cyan": { "400": "#6f93a9", "600": "#4b6c80" },
+    "blue": { "400": "#6d93b3", "600": "#496882" },
+    "purple": { "400": "#81758f", "600": "#595162" },
+    "magenta": { "400": "#a36f7c", "600": "#774a55" }
+  },
+  "keywords": [
+    "surreal",
+    "quiet",
+    "mineral",
+    "mist",
+    "architectural",
+    "cinematic",
+    "contemplative"
+  ]
+}
