@@ -1,6 +1,6 @@
 # Still Orbit
 
-A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.
+A quiet, surreal color theme with mineral blues, misty neutrals, warm atmospheric accents, and restrained contrast.
 
 ## Variants
 
@@ -9,66 +9,66 @@ A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber 
 
 ## Core anchors
 
-| Token | Hex | Role |
+| Token | OKLCH | Role |
 | --- | --- | --- |
-| `paper` | `#f2eee8` | Main light background |
-| `black` | `#232a31` | Main dark background |
-| `base-700` | `#39444f` | Primary text / strong surfaces |
-| `base-600` | `#596068` | Secondary text |
-| `base-400` | `#9d9893` | Muted text |
-| `accent-soft` | `#e6c5a4` | Soft cinematic highlight |
+| `paper` | `oklch(95.1% 0.009 78.3)` | Main light background |
+| `black` | `oklch(28.1% 0.016 248.4)` | Main dark background |
+| `base-700` | `oklch(38.1% 0.024 248.4)` | Primary text / strong surfaces |
+| `base-600` | `oklch(48.6% 0.016 251.7)` | Secondary text in Mist |
+| `base-400` | `oklch(68.2% 0.009 67.7)` | Muted text in Night |
+| `accent-soft` | `oklch(84.3% 0.058 66.9)` | Soft cinematic highlight |
 
 ## Neutral scale
 
-| Token | Hex |
+| Token | OKLCH |
 | --- | --- |
-| `base-50` | `#f6f2ec` |
-| `base-100` | `#eee7de` |
-| `base-150` | `#e3d9cd` |
-| `base-200` | `#d4c6b7` |
-| `base-300` | `#b8aba0` |
-| `base-400` | `#9d9893` |
-| `base-500` | `#7f878f` |
-| `base-600` | `#596068` |
-| `base-700` | `#39444f` |
-| `base-800` | `#2e3a45` |
-| `base-850` | `#28323c` |
-| `base-900` | `#232a31` |
-| `base-950` | `#171c22` |
+| `base-50` | `oklch(96.3% 0.009 78.3)` |
+| `base-100` | `oklch(93.1% 0.014 74.4)` |
+| `base-150` | `oklch(89.0% 0.020 72.6)` |
+| `base-200` | `oklch(83.4% 0.026 69.4)` |
+| `base-300` | `oklch(74.9% 0.022 62.8)` |
+| `base-400` | `oklch(68.2% 0.009 67.7)` |
+| `base-500` | `oklch(61.9% 0.015 248.1)` |
+| `base-600` | `oklch(48.6% 0.016 251.7)` |
+| `base-700` | `oklch(38.1% 0.024 248.4)` |
+| `base-800` | `oklch(34.2% 0.025 246.3)` |
+| `base-850` | `oklch(31.2% 0.023 248.6)` |
+| `base-900` | `oklch(28.1% 0.016 248.4)` |
+| `base-950` | `oklch(22.4% 0.014 253.1)` |
 
 ## Accent families
 
 ### Red
-- `red-400` `#aa6b58`
-- `red-600` `#7d473d`
+- `red-400` `oklch(59.1% 0.086 37.5)`
+- `red-600` `oklch(46.0% 0.076 31.4)`
 
 ### Orange
-- `orange-400` `#c88d60`
-- `orange-600` `#97603d`
+- `orange-400` `oklch(69.2% 0.094 57.8)`
+- `orange-600` `oklch(54.2% 0.087 52.4)`
 
 ### Yellow
-- `yellow-400` `#beaa76`
-- `yellow-600` `#89764f`
+- `yellow-400` `oklch(74.3% 0.073 89.4)`
+- `yellow-600` `oklch(57.4% 0.060 84.7)`
 
 ### Green
-- `green-400` `#7c9187`
-- `green-600` `#546660`
+- `green-400` `oklch(63.7% 0.028 165.1)`
+- `green-600` `oklch(49.3% 0.024 173.1)`
 
 ### Cyan
-- `cyan-400` `#6f93a9`
-- `cyan-600` `#4b6c80`
+- `cyan-400` `oklch(64.4% 0.052 235.5)`
+- `cyan-600` `oklch(51.4% 0.050 235.6)`
 
 ### Blue
-- `blue-400` `#6d93b3`
-- `blue-600` `#496882`
+- `blue-400` `oklch(64.7% 0.064 244.4)`
+- `blue-600` `oklch(50.4% 0.055 244.5)`
 
 ### Purple
-- `purple-400` `#81758f`
-- `purple-600` `#595162`
+- `purple-400` `oklch(58.2% 0.042 306.0)`
+- `purple-600` `oklch(44.9% 0.029 306.5)`
 
 ### Magenta
-- `magenta-400` `#a36f7c`
-- `magenta-600` `#774a55`
+- `magenta-400` `oklch(59.9% 0.068 3.0)`
+- `magenta-600` `oklch(46.4% 0.063 3.9)`
 
 ## Semantic guidance
 
@@ -76,12 +76,12 @@ A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber 
 - Backgrounds: `paper`, `base-50`, `base-100`
 - Text: `base-700`, `base-600`, `base-400`
 - Borders: `base-150`, `base-200`
-- Links: `cyan-600`
+- Links: `blue-600`, `cyan-600`
 - Warm accents: `orange-400`, `accent-soft`
 
 ### Night
 - Backgrounds: `base-950`, `base-900`, `black`
-- Text: `base-200`, `base-500`, `base-600`
+- Text: `base-200`, `base-400`, `base-500`
 - Borders: `base-800`, `base-850`
 - Links: `blue-400`, `cyan-400`
 - Warm accents: `orange-400`, `accent-soft`

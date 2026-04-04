@@ -1,17 +1,15 @@
 # Still Orbit
 
-A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.
+A quiet, surreal color theme with mineral blues, misty neutrals, warm atmospheric accents, and restrained contrast.
 
 ## Preview
 
-## Preview
-
-| Type | Image |
+| Type | Preview |
 | --- | --- |
 | Wallpaper | ![Still Orbit Night wallpaper](./preview/wallpaper.png) |
-| [Site preview](https://viniciusnevescosta.com) | ![Still Orbit Mist site preview](./preview/site.png) |
+| Live site | ![Website](./preview/website.png) |
 
-Still Orbit is a standalone theme meant for interfaces that want a restrained, atmospheric look instead of neon contrast or overt fantasy. It was designed around a contemplative visual mood: reflective surfaces, foggy distance, architectural calm, and warm light used sparingly.
+Still Orbit is a standalone theme for interfaces that want a calm, reflective visual language instead of neon contrast or overt fantasy. It is built around foggy neutrals, mineral blues, soft amber light, and a low-noise sense of depth.
 
 ## Variants
 
@@ -23,7 +21,7 @@ Still Orbit is a standalone theme meant for interfaces that want a restrained, a
 - mineral blues and slate neutrals
 - misty light surfaces
 - warm amber accents in small doses
-- low-noise contrast
+- restrained contrast and quiet hierarchy
 - calm, surreal atmosphere
 
 ## Files
@@ -37,14 +35,14 @@ Still Orbit is a standalone theme meant for interfaces that want a restrained, a
 
 ### Core anchors
 
-| Token | Hex |
+| Token | OKLCH |
 | --- | --- |
-| `paper` | `#f2eee8` |
-| `black` | `#232a31` |
-| `base-700` | `#39444f` |
-| `base-600` | `#596068` |
-| `base-400` | `#9d9893` |
-| `accent-soft` | `#e6c5a4` |
+| `paper` | `oklch(95.1% 0.009 78.3)` |
+| `black` | `oklch(28.1% 0.016 248.4)` |
+| `base-700` | `oklch(38.1% 0.024 248.4)` |
+| `base-600` | `oklch(48.6% 0.016 251.7)` |
+| `base-400` | `oklch(68.2% 0.009 67.7)` |
+| `accent-soft` | `oklch(84.3% 0.058 66.9)` |
 
 ## Usage
 
@@ -100,15 +98,15 @@ Import the theme file before your app styles:
 @import "./still-orbit-tailwind.css";
 ```
 
-Then use the exported tokens in your own semantic mapping or directly in utilities built on top of the theme.
+Then map the exported tokens to your own semantic classes or use them directly in utilities built on top of the theme.
 
 ## Semantic intent
 
 Still Orbit works best when most of the interface stays neutral.
 
 - Use `base-*` and surface tokens for the bulk of the UI
-- Use blue/cyan for links and cool emphasis
-- Use orange/amber sparingly for highlights and calls to attention
+- Use blue and cyan for links and cool emphasis
+- Use orange and amber sparingly for highlights and calls to attention
 - Avoid oversaturating components; the theme is designed to breathe
 
 ## Recommended use cases
