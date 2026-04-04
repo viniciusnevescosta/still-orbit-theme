@@ -6,7 +6,7 @@ A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber 
 
 | Wallpaper | Site preview |
 | --- | --- |
-| ![Still Orbit wallpaper](./preview/wallpaper.png) | ![Still Orbit site preview](./preview/site.png) |
+| ![Still Orbit Night wallpaper](./preview/wallpaper.png) | ![Still Orbit Mist site preview](./preview/site.png) |
 
 Still Orbit is a standalone theme meant for interfaces that want a restrained, atmospheric look instead of neon contrast or overt fantasy. It was designed around a contemplative visual mood: reflective surfaces, foggy distance, architectural calm, and warm light used sparingly.
 
@@ -134,4 +134,4 @@ Still Orbit fits especially well in:
 
 ## License
 
-Add the license that best matches how you want to distribute the theme.
+[MIT](LICENSE)
