@@ -8,8 +8,8 @@ A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber 
 
 | Type | Image |
 | --- | --- |
-| Wallpaper (Night mode) | ![Still Orbit Night wallpaper](./preview/wallpaper.png) |
-| [Site preview (Mist mode)](https://viniciusnevescosta.com) | ![Still Orbit Mist site preview](./preview/site.png) |
+| Wallpaper | ![Still Orbit Night wallpaper](./preview/wallpaper.png) |
+| [Site preview](https://viniciusnevescosta.com) | ![Still Orbit Mist site preview](./preview/site.png) |
 
 Still Orbit is a standalone theme meant for interfaces that want a restrained, atmospheric look instead of neon contrast or overt fantasy. It was designed around a contemplative visual mood: reflective surfaces, foggy distance, architectural calm, and warm light used sparingly.
 
@@ -28,10 +28,10 @@ Still Orbit is a standalone theme meant for interfaces that want a restrained, a
 
 ## Files
 
-- `still-orbit.css` — standalone CSS custom properties with semantic tokens
-- `still-orbit.json` — machine-readable theme tokens and metadata
-- `still-orbit-tailwind.css` — Tailwind v4-ready `@theme` tokens
-- `palette.md` — palette reference and usage notes
+- [`still-orbit.css`](themes/still-orbit.css) — standalone CSS custom properties with semantic tokens
+- [`still-orbit.json`](themes/still-orbit.json) — machine-readable theme tokens and metadata
+- [`still-orbit-tailwind.css`](themes/still-orbit-tailwind.css) — Tailwind v4-ready `@theme` tokens
+- [`palette.md`](docs/palette.md) — palette reference and usage notes
 
 ## Quick look
 
