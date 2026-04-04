@@ -1,0 +1,338 @@
+---
+import '../styles/still-orbit.css';
+import '../styles/site.css';
+import { anchors, baseScale, contrastColor, families, meta, semanticSwatches } from '../data/stillOrbit';
+
+const pageTitle = `${meta.name} Theme`;
+const pageDescription = `${meta.description} Explore the complete palette, switch between Mist and Night, and click any swatch to copy.`;
+const siteUrl = 'https://viniciusnevescosta.com';
+const githubUrl = 'https://github.com/viniciusnevescosta';
+const mistThemeColor = 'oklch(95.1% 0.009 78.3)';
+---
+
+<html lang="en" data-theme="still-orbit-mist">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={pageDescription} />
+    <meta name="theme-color" content={mistThemeColor} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/preview/wallpaper.png" />
+    <title>{pageTitle}</title>
+    <script is:inline>
+      (() => {
+        const storageKey = 'still-orbit-theme';
+        const root = document.documentElement;
+        const saved = localStorage.getItem(storageKey);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const mode = saved === 'night' || saved === 'mist' ? saved : prefersDark ? 'night' : 'mist';
+        root.dataset.theme = mode === 'night' ? 'still-orbit-night' : 'still-orbit-mist';
+        root.classList.toggle('dark', mode === 'night');
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <div class="controls">
+            <a class="header-link" href={'https://github.com/viniciusnevescosta/still-orbit-theme'} target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.63 2.29 6.7 5.47 7.78.4.08.55-.18.55-.4 0-.2-.01-.85-.01-1.54-2.01.38-2.53-.5-2.69-.97-.09-.24-.48-.97-.82-1.17-.28-.16-.68-.56-.01-.57.63-.01 1.08.6 1.23.85.72 1.24 1.87.89 2.33.68.07-.54.28-.89.51-1.09-1.78-.21-3.64-.92-3.64-4.09 0-.9.31-1.63.82-2.2-.08-.21-.36-1.06.08-2.21 0 0 .67-.22 2.2.84a7.35 7.35 0 0 1 4.01 0c1.53-1.06 2.2-.84 2.2-.84.44 1.15.16 2 .08 2.21.51.57.82 1.29.82 2.2 0 3.18-1.87 3.88-3.65 4.09.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .22.15.49.55.4A8.18 8.18 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z" />
+            </svg>
+            <span>Give it a star on GitHub</span>
+          </a>
+        </a>
+
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to Still Orbit Night" title="Switch theme">
+            <span class="icon-button__glyph" aria-hidden="true">◐</span>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="shell">
+          <section class="content__hero">
+            <div class="hero hero--content">
+              <div class="hero__content">
+                <h1>{meta.name}</h1>
+                <p class="hero__lead">{meta.description}</p>
+                <p class="hero__microcopy">
+                  Explore the full palette, switch between <strong>Mist</strong> and <strong>Night</strong>, and click any swatch to copy its OKLCH value.
+                </p>
+              </div>
+            </div>
+
+            <div class="hero hero--visual" aria-hidden="true">
+              <div class="planet-lockup">
+                <div class="planet-lockup__plane planet-lockup__plane--back">
+                  <div class="planet-lockup__moon-track">
+                    <span class="planet-lockup__moon"></span>
+                  </div>
+                </div>
+            
+                <div class="planet-lockup__planet"></div>
+            
+                <div class="planet-lockup__plane planet-lockup__plane--front">
+                  <div class="planet-lockup__moon-track">
+                    <span class="planet-lockup__moon"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <section class="section" aria-labelledby="resolved-heading">
+          <div class="section__heading">
+            <div>
+              <h2 id="resolved-heading">Resolved interface colors</h2>
+              <p>
+                These tokens change with the theme toggle. Mist uses the lighter semantic values, while Night swaps to the darker presentation values.
+              </p>
+            </div>
+          </div>
+
+          <div class="copy-grid">
+            {semanticSwatches.map((swatch) => (
+              <button
+                class="copy-swatch"
+                type="button"
+                data-copy-current
+                data-light={swatch.light}
+                data-dark={swatch.dark}
+                data-token={swatch.token}
+                style={`--swatch-bg:${swatch.light}; --swatch-fg:${contrastColor(swatch.light)};`}
+              >
+                <div class="copy-swatch__paint">
+                  <span class="copy-swatch__token">{swatch.token}</span>
+                  <span class="copy-swatch__value" data-current-value>{swatch.light}</span>
+                </div>
+                <div class="copy-swatch__meta">
+                  <span class="copy-swatch__label">{swatch.label}</span>
+                  <span class="copy-swatch__note">{swatch.note}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="base-heading">
+          <div class="section__heading">
+            <div>
+              <h2 id="base-heading">Core anchors and neutral scale</h2>
+              <p>
+                The anchors establish the overall atmosphere. The neutral scale carries most of the interface and keeps the palette restrained.
+              </p>
+            </div>
+          </div>
+
+          <div class="anchors">
+            {anchors.map((anchor) => (
+              <button
+                class="copy-swatch"
+                type="button"
+                data-copy={anchor.hex}
+                style={`--swatch-bg:${anchor.hex}; --swatch-fg:${contrastColor(anchor.hex)};`}
+              >
+                <div class="copy-swatch__paint">
+                  <span class="copy-swatch__token">{anchor.token}</span>
+                  <span class="copy-swatch__value">{anchor.hex}</span>
+                </div>
+                <div class="copy-swatch__meta">
+                  <span class="copy-swatch__label">{anchor.token}</span>
+                  <span class="copy-swatch__note">Core anchor</span>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div class="base-grid">
+            {baseScale.map(([step, value]) => (
+              <button
+                class="copy-swatch"
+                type="button"
+                data-copy={value}
+                style={`--swatch-bg:${value}; --swatch-fg:${contrastColor(value)};`}
+              >
+                <div class="copy-swatch__paint">
+                  <span class="copy-swatch__token">base-{step}</span>
+                  <span class="copy-swatch__value">{value}</span>
+                </div>
+                <div class="copy-swatch__meta">
+                  <span class="copy-swatch__label">base-{step}</span>
+                  <span class="copy-swatch__note">Neutral scale</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="accent-heading">
+          <div class="section__heading">
+            <div>
+              <h2 id="accent-heading">Complete accent families</h2>
+              <p>
+                Still Orbit stays mostly neutral. Accent families are available for links, state colors, syntax highlighting, and restrained emphasis.
+              </p>
+            </div>
+          </div>
+
+          <div class="family-list">
+            {families.map((family) => (
+              <article class="family-card">
+                <div class="family-card__header">
+                  <h3>{family.name}</h3>
+                  <p>{family.token}-50 → {family.token}-950</p>
+                </div>
+                <div class="family-grid">
+                  {family.values.map(([step, value]) => (
+                    <button class="mini-swatch" type="button" data-copy={value} style={`--swatch-bg:${value};`}>
+                      <div class="mini-swatch__paint"></div>
+                      <div class="mini-swatch__meta">
+                        <span class="mini-swatch__step">{step}</span>
+                        <span class="mini-swatch__hex">{value}</span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>
+            Made with <span aria-hidden="true">❤️</span> by
+            <a href={'https://viniciusnevescosta.com'} target="_blank" rel="noreferrer">Vinícius Costa</a>
+          </p>
+        </footer>
+      </div>
+    </main>
+
+    <div class="toast" id="copy-toast" role="status" aria-live="polite" aria-atomic="true">
+      <span class="toast__dot" aria-hidden="true"></span>
+      <span id="copy-toast-message">Copied.</span>
+    </div>
+
+    <script is:inline>
+      const storageKey = 'still-orbit-theme';
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+      const themeColor = document.querySelector('meta[name="theme-color"]');
+      const toast = document.getElementById('copy-toast');
+      const toastDot = toast?.querySelector('.toast__dot');
+      const toastMessage = document.getElementById('copy-toast-message');
+      const mistThemeColor = 'oklch(95.1% 0.009 78.3)';
+      const nightThemeColor = 'oklch(28.1% 0.016 248.4)';
+      const lightInk = 'oklch(96.3% 0.009 78.3)';
+      const darkInk = 'oklch(28.1% 0.016 248.4)';
+      let toastTimer;
+    
+      const contrastColor = (value) => {
+        const match = value.match(/oklch\(\s*([0-9.]+)%?/i);
+        if (!match) return lightInk;
+        const lightness = Number.parseFloat(match[1]);
+        return lightness > 72 ? darkInk : lightInk;
+      };
+    
+      const getMode = () => (root.classList.contains('dark') ? 'night' : 'mist');
+    
+      const renderTheme = (mode) => {
+        const isNight = mode === 'night';
+        root.dataset.theme = isNight ? 'still-orbit-night' : 'still-orbit-mist';
+        root.classList.toggle('dark', isNight);
+        localStorage.setItem(storageKey, mode);
+    
+        if (toggle) {
+          const nextLabel = isNight ? 'Still Orbit Mist' : 'Still Orbit Night';
+          toggle.setAttribute('aria-label', `Switch to ${nextLabel}`);
+          toggle.setAttribute('title', `Switch to ${nextLabel}`);
+        }
+    
+        if (themeColor) {
+          themeColor.setAttribute('content', isNight ? nightThemeColor : mistThemeColor);
+        }
+    
+        document.querySelectorAll('[data-current-value]').forEach((node) => {
+          const card = node.closest('[data-copy-current]');
+          if (!card) return;
+          const value = isNight ? card.dataset.dark : card.dataset.light;
+          if (!value) return;
+          node.textContent = value;
+          card.style.setProperty('--swatch-bg', value);
+          card.style.setProperty('--swatch-fg', contrastColor(value));
+        });
+      };
+    
+      const showToast = (message, color) => {
+        if (!toast || !toastMessage) return;
+    
+        toastMessage.textContent = message;
+        toast.style.setProperty('--toast-dot-color', color || 'var(--so-accent-soft)');
+    
+        window.clearTimeout(toastTimer);
+    
+        toast.classList.remove('is-visible');
+        void toast.offsetWidth;
+        toast.classList.add('is-visible');
+    
+        toastTimer = window.setTimeout(() => {
+          toast.classList.remove('is-visible');
+        }, 1700);
+      };
+    
+      const copyText = async (value) => {
+        try {
+          await navigator.clipboard.writeText(value);
+          showToast(`Copied ${value}`, value);
+        } catch {
+          const area = document.createElement('textarea');
+          area.value = value;
+          area.setAttribute('readonly', '');
+          area.style.position = 'absolute';
+          area.style.left = '-9999px';
+          document.body.append(area);
+          area.select();
+          document.execCommand('copy');
+          area.remove();
+          showToast(`Copied ${value}`, value);
+        }
+      };
+    
+      toggle?.addEventListener('click', () => {
+        renderTheme(getMode() === 'night' ? 'mist' : 'night');
+      });
+    
+      document.addEventListener('keydown', (event) => {
+        if (
+          event.key.toLowerCase() === 'd' &&
+          !event.metaKey &&
+          !event.ctrlKey &&
+          !event.altKey &&
+          !(event.target instanceof HTMLInputElement) &&
+          !(event.target instanceof HTMLTextAreaElement)
+        ) {
+          renderTheme(getMode() === 'night' ? 'mist' : 'night');
+        }
+      });
+    
+      document.querySelectorAll('[data-copy], [data-copy-current]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const value = button.hasAttribute('data-copy-current')
+            ? button.querySelector('[data-current-value]')?.textContent?.trim()
+            : button.getAttribute('data-copy');
+          if (!value) return;
+          copyText(value);
+        });
+      });
+    
+      renderTheme(getMode());
+    </script>
+  </body>
+</html>

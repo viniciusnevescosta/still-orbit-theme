@@ -1,0 +1,323 @@
+export type ThemeMode = 'mist' | 'night';
+
+export const meta = {
+  name: 'Still Orbit',
+  slug: 'still-orbit',
+  description:
+    'A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.',
+  tagline:
+    'A restrained palette for calm interfaces, reflective surfaces, and warm highlights used sparingly.',
+};
+
+export const variants = [
+  {
+    key: 'mist',
+    name: 'Still Orbit Mist',
+    mood: 'Light, paper-like, soft, editorial.',
+  },
+  {
+    key: 'night',
+    name: 'Still Orbit Night',
+    mood: 'Dark, reflective, cinematic, architectural.',
+  },
+] as const;
+
+export const semanticSwatches = [
+  {
+    token: 'bg',
+    label: 'Background',
+    note: 'Main page surface',
+    light: 'oklch(95.1% 0.009 78.3)',
+    dark: 'oklch(28.1% 0.016 248.4)',
+  },
+  {
+    token: 'bg-elevated',
+    label: 'Elevated',
+    note: 'Cards and lifted surfaces',
+    light: 'oklch(96.3% 0.009 78.3)',
+    dark: 'oklch(22.4% 0.014 253.1)',
+  },
+  {
+    token: 'bg-subtle',
+    label: 'Subtle',
+    note: 'Secondary background',
+    light: 'oklch(93.1% 0.014 74.4)',
+    dark: 'oklch(28.1% 0.016 248.4)',
+  },
+  {
+    token: 'ui',
+    label: 'UI',
+    note: 'Interface chrome',
+    light: 'oklch(89.0% 0.020 72.6)',
+    dark: 'oklch(31.2% 0.023 248.6)',
+  },
+  {
+    token: 'ui-strong',
+    label: 'UI Strong',
+    note: 'Pressed or active surface',
+    light: 'oklch(83.4% 0.026 69.4)',
+    dark: 'oklch(34.2% 0.025 246.3)',
+  },
+  {
+    token: 'border',
+    label: 'Border',
+    note: 'Default border color',
+    light: 'oklch(83.4% 0.026 69.4)',
+    dark: 'oklch(34.2% 0.025 246.3)',
+  },
+  {
+    token: 'text',
+    label: 'Text',
+    note: 'Default body text',
+    light: 'oklch(38.1% 0.024 248.4)',
+    dark: 'oklch(83.4% 0.026 69.4)',
+  },
+  {
+    token: 'text-muted',
+    label: 'Text Muted',
+    note: 'Secondary copy',
+    light: 'oklch(48.6% 0.016 251.7)',
+    dark: 'oklch(61.9% 0.015 248.1)',
+  },
+  {
+    token: 'heading',
+    label: 'Heading',
+    note: 'High-emphasis text',
+    light: 'oklch(28.1% 0.016 248.4)',
+    dark: 'oklch(96.3% 0.009 78.3)',
+  },
+  {
+    token: 'link',
+    label: 'Link',
+    note: 'Interactive accent',
+    light: 'oklch(51.4% 0.050 235.6)',
+    dark: 'oklch(64.7% 0.064 244.4)',
+  },
+  {
+    token: 'accent',
+    label: 'Accent',
+    note: 'Warm callout tone',
+    light: 'oklch(69.2% 0.094 57.8)',
+    dark: 'oklch(69.2% 0.094 57.8)',
+  },
+  {
+    token: 'accent-soft',
+    label: 'Accent Soft',
+    note: 'Cinematic glow',
+    light: 'oklch(84.3% 0.058 66.9)',
+    dark: 'oklch(84.3% 0.058 66.9)',
+  },
+  {
+    token: 'success',
+    label: 'Success',
+    note: 'Positive state',
+    light: 'oklch(49.3% 0.024 173.1)',
+    dark: 'oklch(63.7% 0.028 165.1)',
+  },
+  {
+    token: 'warning',
+    label: 'Warning',
+    note: 'Caution state',
+    light: 'oklch(57.4% 0.060 84.7)',
+    dark: 'oklch(74.3% 0.073 89.4)',
+  },
+  {
+    token: 'danger',
+    label: 'Danger',
+    note: 'Critical state',
+    light: 'oklch(46.0% 0.076 31.4)',
+    dark: 'oklch(59.1% 0.086 37.5)',
+  },
+  {
+    token: 'info',
+    label: 'Info',
+    note: 'Cool callout',
+    light: 'oklch(50.4% 0.055 244.5)',
+    dark: 'oklch(64.7% 0.064 244.4)',
+  },
+] as const;
+
+export const anchors = [
+  { token: 'paper', hex: 'oklch(95.1% 0.009 78.3)' },
+  { token: 'black', hex: 'oklch(28.1% 0.016 248.4)' },
+  { token: 'accent-soft', hex: 'oklch(84.3% 0.058 66.9)' },
+] as const;
+
+export const baseScale = [
+  ['50', 'oklch(96.3% 0.009 78.3)'],
+  ['100', 'oklch(93.1% 0.014 74.4)'],
+  ['150', 'oklch(89.0% 0.020 72.6)'],
+  ['200', 'oklch(83.4% 0.026 69.4)'],
+  ['300', 'oklch(74.9% 0.022 62.8)'],
+  ['400', 'oklch(68.2% 0.009 67.7)'],
+  ['500', 'oklch(61.9% 0.015 248.1)'],
+  ['600', 'oklch(48.6% 0.016 251.7)'],
+  ['700', 'oklch(38.1% 0.024 248.4)'],
+  ['800', 'oklch(34.2% 0.025 246.3)'],
+  ['850', 'oklch(31.2% 0.023 248.6)'],
+  ['900', 'oklch(28.1% 0.016 248.4)'],
+  ['950', 'oklch(22.4% 0.014 253.1)'],
+] as const;
+
+export const families = [
+  {
+    name: 'Red',
+    token: 'red',
+    values: [
+      ['50', 'oklch(93.7% 0.016 42.4)'],
+      ['100', 'oklch(88.1% 0.031 46.2)'],
+      ['150', 'oklch(82.1% 0.046 46.0)'],
+      ['200', 'oklch(75.1% 0.062 43.1)'],
+      ['300', 'oklch(66.3% 0.078 40.7)'],
+      ['400', 'oklch(59.1% 0.086 37.5)'],
+      ['500', 'oklch(52.4% 0.086 33.6)'],
+      ['600', 'oklch(46.0% 0.076 31.4)'],
+      ['700', 'oklch(39.8% 0.061 30.2)'],
+      ['800', 'oklch(34.7% 0.048 27.5)'],
+      ['850', 'oklch(30.8% 0.040 26.8)'],
+      ['900', 'oklch(26.6% 0.033 25.5)'],
+      ['950', 'oklch(22.4% 0.025 23.5)'],
+    ],
+  },
+  {
+    name: 'Orange',
+    token: 'orange',
+    values: [
+      ['50', 'oklch(96.1% 0.015 77.1)'],
+      ['100', 'oklch(92.2% 0.031 77.0)'],
+      ['150', 'oklch(87.4% 0.047 75.6)'],
+      ['200', 'oklch(81.7% 0.065 72.1)'],
+      ['300', 'oklch(74.9% 0.081 66.7)'],
+      ['400', 'oklch(69.2% 0.094 57.8)'],
+      ['500', 'oklch(62.2% 0.096 53.5)'],
+      ['600', 'oklch(54.2% 0.087 52.4)'],
+      ['700', 'oklch(46.7% 0.072 51.7)'],
+      ['800', 'oklch(40.5% 0.058 52.1)'],
+      ['850', 'oklch(35.8% 0.049 51.8)'],
+      ['900', 'oklch(30.4% 0.040 51.3)'],
+      ['950', 'oklch(24.7% 0.029 51.9)'],
+    ],
+  },
+  {
+    name: 'Yellow',
+    token: 'yellow',
+    values: [
+      ['50', 'oklch(97.4% 0.010 81.8)'],
+      ['100', 'oklch(94.4% 0.023 87.2)'],
+      ['150', 'oklch(90.5% 0.035 88.8)'],
+      ['200', 'oklch(85.7% 0.049 88.8)'],
+      ['300', 'oklch(79.8% 0.063 86.4)'],
+      ['400', 'oklch(74.3% 0.073 89.4)'],
+      ['500', 'oklch(66.7% 0.071 87.3)'],
+      ['600', 'oklch(57.4% 0.060 84.7)'],
+      ['700', 'oklch(49.1% 0.047 85.0)'],
+      ['800', 'oklch(42.1% 0.035 85.4)'],
+      ['850', 'oklch(36.9% 0.027 80.3)'],
+      ['900', 'oklch(31.1% 0.021 73.1)'],
+      ['950', 'oklch(24.6% 0.014 57.5)'],
+    ],
+  },
+  {
+    name: 'Green',
+    token: 'green',
+    values: [
+      ['50', 'oklch(95.9% 0.007 151.9)'],
+      ['100', 'oklch(91.4% 0.013 149.2)'],
+      ['150', 'oklch(85.9% 0.016 154.4)'],
+      ['200', 'oklch(79.6% 0.022 158.5)'],
+      ['300', 'oklch(71.1% 0.029 164.0)'],
+      ['400', 'oklch(63.7% 0.028 165.1)'],
+      ['500', 'oklch(56.2% 0.026 168.1)'],
+      ['600', 'oklch(49.3% 0.024 173.1)'],
+      ['700', 'oklch(42.5% 0.019 176.2)'],
+      ['800', 'oklch(36.5% 0.014 175.5)'],
+      ['850', 'oklch(32.4% 0.012 171.0)'],
+      ['900', 'oklch(28.6% 0.010 176.5)'],
+      ['950', 'oklch(23.8% 0.008 182.3)'],
+    ],
+  },
+  {
+    name: 'Cyan',
+    token: 'cyan',
+    values: [
+      ['50', 'oklch(95.4% 0.009 225.1)'],
+      ['100', 'oklch(91.2% 0.015 229.0)'],
+      ['150', 'oklch(86.1% 0.024 227.8)'],
+      ['200', 'oklch(79.9% 0.034 229.4)'],
+      ['300', 'oklch(72.2% 0.045 231.3)'],
+      ['400', 'oklch(64.4% 0.052 235.5)'],
+      ['500', 'oklch(57.8% 0.054 237.0)'],
+      ['600', 'oklch(51.4% 0.050 235.6)'],
+      ['700', 'oklch(44.6% 0.043 236.6)'],
+      ['800', 'oklch(38.8% 0.034 232.6)'],
+      ['850', 'oklch(34.1% 0.029 233.0)'],
+      ['900', 'oklch(29.5% 0.024 228.4)'],
+      ['950', 'oklch(24.0% 0.019 232.4)'],
+    ],
+  },
+  {
+    name: 'Blue',
+    token: 'blue',
+    values: [
+      ['50', 'oklch(95.8% 0.009 242.8)'],
+      ['100', 'oklch(91.9% 0.017 242.4)'],
+      ['150', 'oklch(87.0% 0.029 241.6)'],
+      ['200', 'oklch(80.5% 0.040 243.6)'],
+      ['300', 'oklch(72.5% 0.058 242.9)'],
+      ['400', 'oklch(64.7% 0.064 244.4)'],
+      ['500', 'oklch(58.1% 0.062 243.6)'],
+      ['600', 'oklch(50.4% 0.055 244.5)'],
+      ['700', 'oklch(43.5% 0.048 245.7)'],
+      ['800', 'oklch(38.0% 0.038 241.8)'],
+      ['850', 'oklch(33.6% 0.032 241.8)'],
+      ['900', 'oklch(28.9% 0.025 237.0)'],
+      ['950', 'oklch(22.9% 0.020 239.3)'],
+    ],
+  },
+  {
+    name: 'Purple',
+    token: 'purple',
+    values: [
+      ['50', 'oklch(95.0% 0.007 312.3)'],
+      ['100', 'oklch(89.8% 0.015 308.3)'],
+      ['150', 'oklch(83.5% 0.025 306.9)'],
+      ['200', 'oklch(76.0% 0.033 306.1)'],
+      ['300', 'oklch(65.8% 0.040 304.5)'],
+      ['400', 'oklch(58.2% 0.042 306.0)'],
+      ['500', 'oklch(51.0% 0.038 304.8)'],
+      ['600', 'oklch(44.9% 0.029 306.5)'],
+      ['700', 'oklch(39.7% 0.021 307.9)'],
+      ['800', 'oklch(34.4% 0.015 308.0)'],
+      ['850', 'oklch(30.5% 0.015 307.9)'],
+      ['900', 'oklch(26.2% 0.012 308.0)'],
+      ['950', 'oklch(21.4% 0.010 303.7)'],
+    ],
+  },
+  {
+    name: 'Magenta',
+    token: 'magenta',
+    values: [
+      ['50', 'oklch(95.2% 0.008 357.8)'],
+      ['100', 'oklch(89.6% 0.018 4.6)'],
+      ['150', 'oklch(83.5% 0.031 5.2)'],
+      ['200', 'oklch(76.4% 0.045 5.8)'],
+      ['300', 'oklch(67.9% 0.060 5.0)'],
+      ['400', 'oklch(59.9% 0.068 3.0)'],
+      ['500', 'oklch(52.9% 0.070 3.5)'],
+      ['600', 'oklch(46.4% 0.063 3.9)'],
+      ['700', 'oklch(40.3% 0.054 3.9)'],
+      ['800', 'oklch(34.9% 0.042 3.1)'],
+      ['850', 'oklch(30.9% 0.038 0.5)'],
+      ['900', 'oklch(26.5% 0.031 2.2)'],
+      ['950', 'oklch(21.8% 0.021 8.8)'],
+    ],
+  },
+] as const;
+
+export function contrastColor(value: string) {
+  const match = value.match(/oklch\(\s*([0-9.]+)%?/i);
+  if (!match) return 'oklch(96.3% 0.009 78.3)';
+  const lightness = Number.parseFloat(match[1]);
+  return lightness > 72 ? 'oklch(28.1% 0.016 248.4)' : 'oklch(96.3% 0.009 78.3)';
+}
+
