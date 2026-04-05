@@ -84,7 +84,7 @@ button {
 .site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   gap: 1rem;
   min-height: 4rem;
 }
@@ -97,12 +97,14 @@ button {
   text-decoration: none;
 }
 
+.header-meta,
 .controls {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
 }
 
+.header-pill,
 .header-link,
 .icon-button {
   display: inline-flex;
@@ -117,6 +119,12 @@ button {
   color: var(--so-heading);
   box-shadow: 0 1px 0 color-mix(in oklab, var(--so-border) 64%, transparent);
   text-decoration: none;
+}
+
+.header-pill {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .header-link svg,
@@ -330,6 +338,20 @@ main {
 
   .planet-lockup {
     width: min(24rem, 78vw);
+  }
+
+  .planet-lockup__plane--back,
+  .planet-lockup__plane--front,
+  .planet-lockup__moon {
+    animation: none !important;
+  }
+
+  .planet-lockup__plane--back {
+    opacity: 0;
+  }
+
+  .planet-lockup__plane--front {
+    opacity: 1;
   }
 }
 
