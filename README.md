@@ -1,6 +1,6 @@
 # Still Orbit
 
-A quiet, surreal color theme with mineral blues, misty neutrals, warm atmospheric accents, and restrained contrast.
+A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.
 
 ## Preview
 
@@ -13,8 +13,8 @@ Still Orbit is a standalone theme for interfaces that want a calm, reflective vi
 
 ## Variants
 
-- **Still Orbit Mist** — light, paper-like, soft, editorial
-- **Still Orbit Night** — dark, reflective, cinematic, architectural
+- **Still Orbit Mist** — Light, paper-like, soft, editorial.
+- **Still Orbit Night** — Dark, reflective, cinematic, architectural.
 
 ## Design traits
 
@@ -26,8 +26,8 @@ Still Orbit is a standalone theme for interfaces that want a calm, reflective vi
 
 ## Files
 
-- [`still-orbit.css`](themes/still-orbit.css) — standalone CSS custom properties with semantic tokens
-- [`still-orbit.json`](themes/still-orbit.json) — machine-readable theme tokens and metadata
+- [`still-orbit.css`](themes/still-orbit.css) — standalone CSS custom properties with semantic tokens and full family scales
+- [`still-orbit.json`](themes/still-orbit.json) — ai-readable theme tokens and metadata
 - [`still-orbit-tailwind.css`](themes/still-orbit-tailwind.css) — Tailwind v4-ready `@theme` tokens
 - [`palette.md`](docs/palette.md) — palette reference and usage notes
 
@@ -39,10 +39,37 @@ Still Orbit is a standalone theme for interfaces that want a calm, reflective vi
 | --- | --- |
 | `paper` | `oklch(95.1% 0.009 78.3)` |
 | `black` | `oklch(28.1% 0.016 248.4)` |
+| `accent-soft` | `oklch(84.3% 0.058 66.9)` |
 | `base-700` | `oklch(38.1% 0.024 248.4)` |
 | `base-600` | `oklch(48.6% 0.016 251.7)` |
 | `base-400` | `oklch(68.2% 0.009 67.7)` |
-| `accent-soft` | `oklch(84.3% 0.058 66.9)` |
+
+### Semantic swatches
+
+| Token | Label | Mist | Night |
+| --- | --- | --- | --- |
+| `bg` | `Background` | `oklch(95.1% 0.009 78.3)` | `oklch(28.1% 0.016 248.4)` |
+| `bg-elevated` | `Elevated` | `oklch(96.3% 0.009 78.3)` | `oklch(22.4% 0.014 253.1)` |
+| `bg-subtle` | `Subtle` | `oklch(93.1% 0.014 74.4)` | `oklch(28.1% 0.016 248.4)` |
+| `ui` | `UI` | `oklch(89.0% 0.020 72.6)` | `oklch(31.2% 0.023 248.6)` |
+| `ui-strong` | `UI Strong` | `oklch(83.4% 0.026 69.4)` | `oklch(34.2% 0.025 246.3)` |
+| `border` | `Border` | `oklch(83.4% 0.026 69.4)` | `oklch(34.2% 0.025 246.3)` |
+| `border-muted` | `Border Muted` | `oklch(89.0% 0.020 72.6)` | `oklch(31.2% 0.023 248.6)` |
+| `text` | `Text` | `oklch(38.1% 0.024 248.4)` | `oklch(83.4% 0.026 69.4)` |
+| `text-muted` | `Text Muted` | `oklch(48.6% 0.016 251.7)` | `oklch(68.2% 0.009 67.7)` |
+| `text-faint` | `Text Faint` | `oklch(68.2% 0.009 67.7)` | `oklch(61.9% 0.015 248.1)` |
+| `heading` | `Heading` | `oklch(28.1% 0.016 248.4)` | `oklch(96.3% 0.009 78.3)` |
+| `link` | `Link` | `oklch(50.4% 0.055 244.5)` | `oklch(64.7% 0.064 244.4)` |
+| `link-hover` | `Link Hover` | `oklch(51.4% 0.050 235.6)` | `oklch(64.4% 0.052 235.5)` |
+| `primary` | `Primary` | `oklch(38.1% 0.024 248.4)` | `oklch(83.4% 0.026 69.4)` |
+| `primary-contrast` | `Primary Contrast` | `oklch(96.3% 0.009 78.3)` | `oklch(22.4% 0.014 253.1)` |
+| `secondary` | `Secondary` | `oklch(51.4% 0.050 235.6)` | `oklch(64.4% 0.052 235.5)` |
+| `accent` | `Accent` | `oklch(69.2% 0.094 57.8)` | `oklch(69.2% 0.094 57.8)` |
+| `accent-soft` | `Accent Soft` | `oklch(84.3% 0.058 66.9)` | `oklch(84.3% 0.058 66.9)` |
+| `success` | `Success` | `oklch(49.3% 0.024 173.1)` | `oklch(63.7% 0.028 165.1)` |
+| `warning` | `Warning` | `oklch(57.4% 0.060 84.7)` | `oklch(74.3% 0.073 89.4)` |
+| `danger` | `Danger` | `oklch(46.0% 0.076 31.4)` | `oklch(59.1% 0.086 37.5)` |
+| `info` | `Info` | `oklch(50.4% 0.055 244.5)` | `oklch(64.7% 0.064 244.4)` |
 
 ## Usage
 
@@ -111,27 +138,11 @@ Still Orbit works best when most of the interface stays neutral.
 
 ## Recommended use cases
 
-Still Orbit fits especially well in:
-
 - personal sites and portfolios
 - blogs and editorial layouts
 - landing pages with cinematic hero sections
 - dashboards with a softer mood
 - creative tools and note-taking apps
-
-## Naming
-
-- **Theme:** Still Orbit
-- **Light variant:** Still Orbit Mist
-- **Dark variant:** Still Orbit Night
-
-## Roadmap ideas
-
-- VS Code theme
-- shadcn/ui preset
-- design tokens package
-- syntax highlighting variants
-- preview gallery
 
 ## License
 
