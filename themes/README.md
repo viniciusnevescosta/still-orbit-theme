@@ -1,8 +1,8 @@
 ## Index
 
 - [CSS](#css)
-- [JSON](#json)
 - [Tailwind](#tailwind)
+- [JSON](#json)
 
 ## CSS
 
@@ -63,45 +63,6 @@ Example:
 }
 ```
 
-## JSON
-
-Use this file when you want to consume Still Orbit programmatically.
-
-### 1. Load the JSON file
-
-Example in JavaScript or TypeScript:
-
-```ts
-import stillOrbit from "./themes/still-orbit.json";
-```
-
-### 2. Read the theme metadata
-
-```ts
-console.log(stillOrbit.name);
-console.log(stillOrbit.variants.mist.label);
-console.log(stillOrbit.variants.night.label);
-```
-
-### 3. Read anchors, semantic tokens, or families
-
-Example:
-
-```ts
-const mistBackground = stillOrbit.variants.mist.semanticSwatches.bg.value;
-const nightText = stillOrbit.variants.night.semanticSwatches.text.value;
-const blue400 = stillOrbit.families.blue["400"];
-```
-
-### 4. Map the values into your own system
-
-You can transform the JSON into:
-
-- CSS variables
-- app theme objects
-- design token exports
-- platform-specific theme files
-
 ## Tailwind
 
 Use this file when your project is based on Tailwind v4 and you want the theme through `@theme`.
@@ -142,3 +103,42 @@ Example:
   }
 }
 ```
+
+## JSON
+
+Use this file when you want to consume Still Orbit programmatically.
+
+### 1. Load the JSON file
+
+Example in JavaScript or TypeScript:
+
+```ts
+import stillOrbit from "./themes/still-orbit.json";
+```
+
+### 2. Read the theme metadata
+
+```ts
+console.log(stillOrbit.name);
+console.log(stillOrbit.variants.mist.label);
+console.log(stillOrbit.variants.night.label);
+```
+
+### 3. Read anchors, semantic tokens, or families
+
+Example:
+
+```ts
+const mistBackground = stillOrbit.variants.mist.semanticSwatches.bg.value;
+const nightText = stillOrbit.variants.night.semanticSwatches.text.value;
+const blue400 = stillOrbit.families.blue["400"];
+```
+
+### 4. Map the values into your own system
+
+You can transform the JSON into:
+
+- CSS variables
+- app theme objects
+- design token exports
+- platform-specific theme files
