@@ -1,7 +1,3 @@
-# Theme Instructions
-
-Step-by-step usage guide for the theme files stored in `/themes`.
-
 ## Index
 
 - [CSS](#css)
