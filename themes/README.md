@@ -1,6 +1,7 @@
 ## Index
 
 - [CSS](#css)
+- [SCSS](#scss)
 - [Tailwind](#tailwind)
 - [JSON](#json)
 
@@ -16,6 +17,65 @@ Place `still-orbit.css` somewhere inside your styles folder, or keep it in `/the
 
 ```css
 @import "./themes/still-orbit.css";
+```
+
+### 3. Set the theme variant on the page root
+
+For the light variant:
+
+```html
+<html data-theme="still-orbit-mist">
+```
+
+For the dark variant:
+
+```html
+<html data-theme="still-orbit-night">
+```
+
+You can also use a `.dark` class for the dark mode if your project already follows that pattern.
+
+```html
+<html class="dark">
+```
+
+### 4. Use the semantic tokens in your components
+
+Example:
+
+```css
+.card {
+  background: var(--so-bg-elevated);
+  color: var(--so-text);
+  border: 1px solid var(--so-border);
+  box-shadow: 0 10px 30px var(--so-shadow-color);
+}
+
+.card h2 {
+  color: var(--so-heading);
+}
+
+.card a {
+  color: var(--so-link);
+}
+
+.card a:hover {
+  color: var(--so-link-hover);
+}
+```
+
+## SCSS
+
+Use this file when you want Still Orbit as SCSS while keeping the same CSS custom properties API.
+
+### 1. Add the file to your project
+
+Place `still-orbit.scss` somewhere inside your styles folder, or keep it in `/themes` and import it from there.
+
+### 2. Import it into your stylesheet
+
+```scss
+@use "./themes/still-orbit.scss";
 ```
 
 ### 3. Set the theme variant on the page root
