@@ -7,8 +7,6 @@
 
 ## CSS
 
-Use this file when you want Still Orbit as plain CSS custom properties.
-
 ### 1. Add the file to your project
 
 Place `still-orbit.css` somewhere inside your styles folder, or keep it in `/themes` and import it from there.
@@ -66,8 +64,6 @@ Example:
 
 ## SCSS
 
-Use this file when you want Still Orbit as SCSS while keeping the same CSS custom properties API.
-
 ### 1. Add the file to your project
 
 Place `still-orbit.scss` somewhere inside your styles folder, or keep it in `/themes` and import it from there.
@@ -124,8 +120,6 @@ Example:
 ```
 
 ## Tailwind
-
-Use this file when your project is based on Tailwind v4 and you want the theme through `@theme`.
 
 ### 1. Import Tailwind first
 
