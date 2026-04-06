@@ -2,6 +2,17 @@
 
 A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.
 
+## Index
+
+- [Preview](#preview)
+- [Overview](#overview)
+- [Variants](#variants)
+- [Design traits](#design-traits)
+- [Files](#files)
+- [Palette overview](#palette-overview)
+- [Documentation](#documentation)
+- [License](#license)
+
 ## Preview
 
 | Type | Preview |
@@ -9,27 +20,30 @@ A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber 
 | Wallpaper | ![Still Orbit Night wallpaper](./preview/wallpaper.png) |
 | Live site | ![Website](./preview/website.png) |
 
-Still Orbit is a standalone theme for interfaces that want a calm, reflective visual language instead of neon contrast or overt fantasy. It is built around foggy neutrals, mineral blues, soft amber light, and a low-noise sense of depth.
+## Overview
+
+Still Orbit is a standalone theme for interfaces that want a calm, reflective visual language instead of neon contrast or overt fantasy.
+
+It is built around foggy neutrals, mineral blues, soft amber light, and a low-noise sense of depth. The theme is designed to stay restrained in most of the interface, with color reserved for hierarchy, interaction, and quiet emphasis.
 
 ## Variants
 
 - **Still Orbit Mist** — Light, paper-like, soft, editorial.
 - **Still Orbit Night** — Dark, reflective, cinematic, architectural.
 
-## Design traits
+## Documentation
 
-- mineral blues and slate neutrals
-- misty light surfaces
-- warm amber accents in small doses
-- restrained contrast and quiet hierarchy
-- calm, surreal atmosphere
+For setup, implementation notes, see:
+
+- [`themes/instructions.md`](themes/instructions.md)
 
 ## Files
 
-- [`still-orbit.css`](themes/still-orbit.css) — standalone CSS custom properties with semantic tokens and full family scales
-- [`still-orbit.json`](themes/still-orbit.json) — ai-readable theme tokens and metadata
-- [`still-orbit-tailwind.css`](themes/still-orbit-tailwind.css) — Tailwind v4-ready `@theme` tokens
-- [`palette.md`](docs/palette.md) — palette reference and usage notes
+- [`themes/still-orbit.css`](themes/still-orbit.css) — standalone CSS custom properties with semantic tokens and full family scales
+- [`themes/still-orbit.json`](themes/still-orbit.json) — machine-readable theme tokens and metadata
+- [`themes/still-orbit-tailwind.css`](themes/still-orbit-tailwind.css) — Tailwind v4-ready `@theme` tokens
+- [`themes/instructions.md`](themes/instructions.md) — usage notes, integration guidance, and theme file reference
+- [`docs/palette.md`](docs/palette.md) — palette reference and semantic overview
 
 ## Quick look
 
@@ -70,79 +84,6 @@ Still Orbit is a standalone theme for interfaces that want a calm, reflective vi
 | `warning` | `Warning` | `oklch(57.4% 0.060 84.7)` | `oklch(74.3% 0.073 89.4)` |
 | `danger` | `Danger` | `oklch(46.0% 0.076 31.4)` | `oklch(59.1% 0.086 37.5)` |
 | `info` | `Info` | `oklch(50.4% 0.055 244.5)` | `oklch(64.7% 0.064 244.4)` |
-
-## Usage
-
-### Plain CSS
-
-```css
-@import "./still-orbit.css";
-```
-
-Light theme:
-
-```html
-<html data-theme="still-orbit-mist">
-```
-
-Dark theme:
-
-```html
-<html class="dark">
-```
-
-or:
-
-```html
-<html data-theme="still-orbit-night">
-```
-
-Example:
-
-```css
-.card {
-  background: var(--so-bg-elevated);
-  color: var(--so-text);
-  border: 1px solid var(--so-border);
-  box-shadow: 0 10px 30px var(--so-shadow-color);
-}
-
-.card a {
-  color: var(--so-link);
-}
-
-.card a:hover {
-  color: var(--so-link-hover);
-}
-```
-
-### Tailwind v4
-
-Import the theme file before your app styles:
-
-```css
-@import "tailwindcss";
-@import "./still-orbit-tailwind.css";
-```
-
-Then map the exported tokens to your own semantic classes or use them directly in utilities built on top of the theme.
-
-## Semantic intent
-
-Still Orbit works best when most of the interface stays neutral.
-
-- Use `base-*` and surface tokens for the bulk of the UI
-- Use blue and cyan for links and cool emphasis
-- Use orange and amber sparingly for highlights and calls to attention
-- Avoid oversaturating components; the theme is designed to breathe
-
-## Recommended use cases
-
-- personal sites and portfolios
-- blogs and editorial layouts
-- landing pages with cinematic hero sections
-- dashboards with a softer mood
-- creative tools and note-taking apps
 
 ## License
 
