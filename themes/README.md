@@ -4,13 +4,11 @@ Step-by-step usage guide for the theme files stored in `/themes`.
 
 ## Index
 
-- [Available files](#available-files)
-- [`still-orbit.css`](#using-still-orbitcss)
-- [`still-orbit.json`](#using-still-orbitjson)
-- [`still-orbit-tailwind.css`](#using-still-orbit-tailwindcss)
-- [Notes](#notes)
+- [CSS](#css)
+- [JSON](#json)
+- [Tailwind](#tailwind)
 
-## `still-orbit.css`
+## CSS
 
 Use this file when you want Still Orbit as plain CSS custom properties.
 
@@ -69,7 +67,7 @@ Example:
 }
 ```
 
-## `still-orbit.json`
+## JSON
 
 Use this file when you want to consume Still Orbit programmatically.
 
@@ -108,7 +106,7 @@ You can transform the JSON into:
 - design token exports
 - platform-specific theme files
 
-## `still-orbit-tailwind.css`
+## Tailwind
 
 Use this file when your project is based on Tailwind v4 and you want the theme through `@theme`.
 
