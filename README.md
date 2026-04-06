@@ -22,9 +22,13 @@ It is built around foggy neutrals, mineral blues, soft amber light, and a low-no
 
 ## Documentation
 
-For setup, implementation notes, see:
+For setup, please see:
 
-- [`themes/instructions.md`](themes/README.md)
+- [`themes/README.md`](themes/README.md)
+
+For color reference, please see:
+
+- [`docs/README.md`](themes/README.md)
 
 ## License
 
