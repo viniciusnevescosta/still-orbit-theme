@@ -10,8 +10,6 @@ Step-by-step usage guide for the theme files stored in `/themes`.
 - [`still-orbit-tailwind.css`](#using-still-orbit-tailwindcss)
 - [Notes](#notes)
 
----
-
 ## `still-orbit.css`
 
 Use this file when you want Still Orbit as plain CSS custom properties.
@@ -71,8 +69,6 @@ Example:
 }
 ```
 
----
-
 ## `still-orbit.json`
 
 Use this file when you want to consume Still Orbit programmatically.
@@ -111,8 +107,6 @@ You can transform the JSON into:
 - app theme objects
 - design token exports
 - platform-specific theme files
-
----
 
 ## `still-orbit-tailwind.css`
 
@@ -154,10 +148,3 @@ Example:
   }
 }
 ```
-
-## Notes
-
-- Prefer semantic tokens over raw palette values for interface work.
-- Treat Mist and Night as two resolutions of the same visual system.
-- Keep most surfaces neutral and use color sparingly.
-- This document is intended to grow as more themes are added to `/themes`.

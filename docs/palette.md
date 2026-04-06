@@ -1,12 +1,3 @@
-# Still Orbit
-
-A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.
-
-## Variants
-
-- **Still Orbit Mist** — Light, paper-like, soft, editorial.
-- **Still Orbit Night** — Dark, reflective, cinematic, architectural.
-
 ## Core anchors
 
 | Token | OKLCH |
@@ -208,9 +199,3 @@ A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber 
 | `magenta-850` | `oklch(30.9% 0.038 0.5)` |
 | `magenta-900` | `oklch(26.5% 0.031 2.2)` |
 | `magenta-950` | `oklch(21.8% 0.021 8.8)` |
-
-## Suggested usage
-
-- Use **Mist** for editorial pages, portfolio pages, blogs, and product surfaces that need softness.
-- Use **Night** for immersive layouts, hero sections, dashboards, and cinematic presentations.
-- Keep accent usage restrained. The theme works best when the interface stays mostly neutral and uses warm tones sparingly.
