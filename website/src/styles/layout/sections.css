@@ -1,0 +1,25 @@
+.section {
+  padding: 2rem 0;
+}
+
+.section + .section {
+  border-top: 1px solid color-mix(in oklab, var(--so-border) 72%, transparent);
+}
+
+.section__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 1.25rem;
+}
+
+.section__heading h2 {
+  color: var(--so-heading);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+}
+
+.section__heading p {
+  max-width: 44rem;
+  color: var(--so-text-muted);
+}

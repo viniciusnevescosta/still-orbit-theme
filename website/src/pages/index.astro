@@ -10,6 +10,8 @@ const siteUrl = 'https://viniciusnevescosta.com';
 const githubUrl = 'https://github.com/viniciusnevescosta/still-orbit-theme';
 const mistThemeColor = 'oklch(95.1% 0.009 78.3)';
 const version = packageJson.version;
+const ogImagePath = '/preview/wallpaper.png';
+const ogImageUrl = new URL(ogImagePath, siteUrl).toString();
 ---
 
 <html lang="en" data-theme="still-orbit-mist">
@@ -24,7 +26,10 @@ const version = packageJson.version;
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/preview/wallpaper.png" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:url" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageUrl} />
     <title>{pageTitle}</title>
     <script src="../scripts/theme-init.ts"></script>
   </head>

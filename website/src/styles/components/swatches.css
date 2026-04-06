@@ -1,0 +1,87 @@
+.copy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.copy-swatch {
+  display: grid;
+  gap: 0.9rem;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--so-border);
+  border-radius: var(--radius-md);
+  background: var(--so-bg-elevated);
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.copy-swatch__paint {
+  position: relative;
+  min-height: 9rem;
+  padding: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--swatch-fg, var(--so-black));
+  background: var(--swatch-bg, var(--so-bg-subtle));
+}
+
+.copy-swatch__paint::after {
+  content: "Copy";
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  padding: 0.24rem 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, currentColor 12%, transparent);
+  color: inherit;
+  font-size: 0.72rem;
+}
+
+.copy-swatch__token {
+  display: inline-flex;
+  max-width: max-content;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, currentColor 12%, transparent);
+  color: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.copy-swatch__value {
+  display: none;
+}
+
+.copy-swatch__meta {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0 0.95rem 1rem;
+}
+
+.copy-swatch__label {
+  color: var(--so-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.copy-swatch__note {
+  color: var(--so-text-muted);
+  font-size: 0.82rem;
+}
+
+.anchors {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.base-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.9rem;
+}

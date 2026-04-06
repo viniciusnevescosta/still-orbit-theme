@@ -1,0 +1,73 @@
+.family-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.family-card {
+  border: 1px solid var(--so-border);
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--so-bg-elevated) 92%, transparent);
+  padding: 1rem;
+}
+
+.family-card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.family-card__header h3 {
+  color: var(--so-heading);
+  font-size: 1rem;
+}
+
+.family-card__header p {
+  color: var(--so-text-faint);
+  font-size: 0.8rem;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.mini-swatch {
+  display: grid;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--so-border);
+  border-radius: 16px;
+  background: var(--so-bg);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mini-swatch__paint {
+  min-height: 5rem;
+  background: var(--swatch-bg);
+}
+
+.mini-swatch__meta {
+  display: grid;
+  gap: 0.16rem;
+  padding: 0 0.75rem 0.8rem;
+}
+
+.mini-swatch__step {
+  color: var(--so-heading);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.mini-swatch__hex {
+  color: var(--so-text-faint);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}

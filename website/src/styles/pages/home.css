@@ -1,0 +1,129 @@
+@media (max-width: 1024px) {
+  .copy-grid,
+  .base-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .family-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .content__hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero--visual {
+    justify-content: start;
+  }
+
+  .planet-lockup {
+    width: min(24rem, 78vw);
+  }
+
+  .planet-lockup__plane--back,
+  .planet-lockup__plane--front,
+  .planet-lockup__moon {
+    animation: none !important;
+  }
+
+  .planet-lockup__plane--back {
+    opacity: 0;
+  }
+
+  .planet-lockup__plane--front {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header__inner {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .section__heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-link span {
+    display: none;
+  }
+
+  .header-pill,
+  .header-link,
+  .icon-button {
+    min-height: 2.35rem;
+    padding: 0.5rem 0.72rem;
+  }
+
+  .header-link {
+    padding-inline: 0.7rem;
+  }
+
+  .copy-grid,
+  .base-grid,
+  .anchors,
+  .family-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  main {
+    padding-top: 2.8rem;
+  }
+
+  .site-header__inner {
+    min-height: 3.75rem;
+  }
+
+  .header-meta {
+    min-width: 0;
+  }
+
+  .controls {
+    width: auto;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .header-pill,
+  .header-link,
+  .icon-button {
+    min-height: 2.25rem;
+  }
+
+  .header-pill {
+    padding-inline: 0.7rem;
+    font-size: 0.76rem;
+  }
+
+  .icon-button {
+    width: 2.25rem;
+  }
+
+  .copy-grid,
+  .base-grid,
+  .anchors,
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .planet-lockup__plane--back,
+  .planet-lockup__plane--front,
+  .planet-lockup__moon,
+  .planet-lockup__moon-track {
+    animation: none !important;
+  }
+
+  .toast.is-visible {
+    animation: none;
+  }
+}

@@ -1,0 +1,45 @@
+.toast {
+  --toast-dot-color: var(--so-accent-soft);
+  position: fixed;
+  inset: auto 1rem 1rem auto;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--so-border);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--so-bg-elevated) 94%, transparent);
+  color: var(--so-heading);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  transform: translateY(0.55rem);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: toast-fade-in-up 160ms ease-out both;
+}
+
+.toast__dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--toast-dot-color);
+  border: 1px solid var(--so-border);
+  box-shadow: 0 0 0 0.22rem color-mix(in oklab, var(--toast-dot-color) 18%, transparent);
+}
+
+@keyframes toast-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.55rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
