@@ -4,6 +4,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://viniciusnevescosta.com",
+  site: "https://still-orbit.viniciusnevescosta.com",
   integrations: [sitemap()],
 });

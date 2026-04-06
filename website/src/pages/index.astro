@@ -73,7 +73,16 @@ const ogImageUrl = new URL(ogImagePath, siteUrl).toString();
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>Show current support</span>
+                <span>Current support</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                class="hero-button"
+                href={`${githubUrl}/tree/main/docs`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Color schema</span>
                 <span aria-hidden="true">→</span>
               </a>
             </div>
@@ -101,7 +110,7 @@ const ogImageUrl = new URL(ogImagePath, siteUrl).toString();
         <section class="section" aria-labelledby="resolved-heading">
           <div class="section__heading">
             <div>
-              <h2 id="resolved-heading">Resolved interface colors</h2>
+              <h2 id="resolved-heading">Resolved inrface colors</h2>
               <p>
                 These tokens change with the theme toggle. Mist uses the lighter semantic values, while Night swaps to the darker presentation values.
               </p>
