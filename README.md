@@ -2,33 +2,17 @@
 
 A quiet, surreal color theme with mineral blues, misty neutrals, and soft amber highlights.
 
-<!--## Preview
+[Documentation reference.](https://stillorbit.viniciusnevescosta.com)
 
-| Type | Preview |
-| --- | --- |
-| Wallpaper | ![Still Orbit Night wallpaper](./preview/wallpaper.png) |
-| [Live site](still-orbit.viniciusnevescosta.com) | ![Website](./preview/website.png) |-->
+## Contributing
 
-## Overview
+Contributions are welcome.
 
-Still Orbit is a standalone theme for interfaces that want a calm, reflective visual language instead of neon contrast or overt fantasy.
-
-It is built around foggy neutrals, mineral blues, soft amber light, and a low-noise sense of depth. The theme is designed to stay restrained in most of the interface, with color reserved for hierarchy, interaction, and quiet emphasis.
-
-## Variants
-
-- **Still Orbit Mist** — Light, paper-like, soft, editorial.
-- **Still Orbit Night** — Dark, reflective, cinematic, architectural.
-
-## Documentation
-
-For setup, please see:
-
-- [`themes/README.md`](themes/README.md)
-
-For color reference, please see:
-
-- [`docs/README.md`](themes/README.md)
+If you want to contribute:
+- open an issue to report bugs or suggest improvements
+- fork the repository and create a new branch for your changes
+- keep commit and branch names consistent with the project's conventions
+- open a pull request with a clear description of what changed and why
 
 ## License
 
